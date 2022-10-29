@@ -1,5 +1,5 @@
 .board {
-    position: absolute;
+    position: relative;
     width: 490px;
     height: 300px;
     border: 1px solid black;
@@ -9,17 +9,21 @@
     bottom: 0;
     right: 0;
     left: 0;
-    margin: auto;
+    margin: -550px auto;
+    z-index: -1;
 }
 .tv{
-  background-color: rgba(0, 0, 0, 0.226);
+  /* background-color: rgba(0, 0, 0, 0.226); */
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
-  margin: auto;
+  margin: 200px auto 100px 100px;
   justify-content: 0;
+}
+#divTv {
+  text-align: center;
 }
 .modal{
     display: none;
@@ -56,6 +60,8 @@
     width: 120px;
     position: absolute;
     bottom: 50px ;
+    z-index: 1;
+    align-items: flex-start;
   }
   #nuven {
     width: 400px;
@@ -67,9 +73,8 @@
   #grama{
     width: 1000px;
     position: absolute;
-    bottom: -6px;
+    bottom: 20px;
     right: 0;
-    animation: grama-anime 2.5s infinite linear;
   }
   .jump{
     animation: mario-jump 2s ;
