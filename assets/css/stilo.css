@@ -11,6 +11,7 @@
     left: 0;
     margin: -550px auto;
     z-index: -1;
+    text-align: left;
 }
 .tv{
   /* background-color: rgba(0, 0, 0, 0.226); */
@@ -19,7 +20,7 @@
   left: 0;
   bottom: 0;
   right: 0;
-  margin: 200px auto 100px 100px;
+  margin: 100px auto 100px 100px;
   justify-content: 0;
 }
 #divTv {
