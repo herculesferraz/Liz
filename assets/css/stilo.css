@@ -1,0 +1,111 @@
+.board {
+    position: absolute;
+    width: 490px;
+    height: 300px;
+    border: 1px solid black;
+    background-color: rgb(64, 116, 247);
+    overflow: hidden;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+.tv{
+  background-color: rgba(0, 0, 0, 0.226);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  justify-content: 0;
+}
+.modal{
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.282);
+    justify-content: center;
+    align-items: center;
+}
+.modal.show{
+  display: block;
+}
+.menu{
+    margin: 100px auto;
+    margin-left: -20px auto;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+}
+#gameOver{
+  size: 100px;
+}
+#pipe {
+    width: 80px;
+    position: absolute;
+    bottom: 50px;
+    right: 0;
+    animation: pipe-anime 2.5s infinite linear;
+  }
+  #mario {
+    width: 120px;
+    position: absolute;
+    bottom: 50px ;
+  }
+  #nuven {
+    width: 400px;
+    position: absolute;
+    bottom: 500;
+    right: 0;
+    animation: nuven-anime 7s infinite linear;
+  }
+  #grama{
+    width: 1000px;
+    position: absolute;
+    bottom: -6px;
+    right: 0;
+    animation: grama-anime 2.5s infinite linear;
+  }
+  .jump{
+    animation: mario-jump 2s ;
+  }
+  @keyframes pipe-anime {
+    from{
+        right: -150px;
+    }
+    to{
+        right: 100%;
+    }
+  }
+  @keyframes mario-jump {
+    0% {
+        bottom: 50px;
+    }
+    10%{
+        bottom: 200px;
+    }
+    100%{
+        bottom: 50px;
+    }
+  }
+  @keyframes nuven-anime {
+    from{
+        right: -150px;
+    }
+    to{
+        right: 100%;
+    }
+  }
+  @keyframes grama-anime {
+    from{
+        right: -150px;
+    }
+    to{
+        right: 100%;
+    }
+}
