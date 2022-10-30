@@ -1,5 +1,5 @@
-body{
-  background-image: url(../img/wallpaperbetter.com_1920x1080.jpg);
+body {
+  background-image: url(../img/pixel-green.png);
 }
 .board {
   position: relative;
@@ -18,7 +18,6 @@ body{
 }
 
 .tv {
-  /* background-color: rgba(0, 0, 0, 0.226); */
   position: absolute;
   top: 0;
   left: 0;
@@ -34,12 +33,14 @@ body{
 
 .modal {
   display: none;
-  width: 100%;
-  height: 100%;
+  width: 500px;
+  height: 500px;
   position: absolute;
-  top: 0px;
-  z-index: 99;
-  background-color: rgba(0, 0, 0, 0.282);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: 200px auto auto auto;
   justify-content: center;
   align-items: center;
 }
@@ -49,7 +50,7 @@ body{
 }
 
 .menu {
-  margin: 100px auto;
+  margin: 210px auto auto 60px;
   margin-left: -20px auto;
   width: 300px;
   height: 300px;
@@ -57,11 +58,21 @@ body{
 }
 
 #placa_tiro {
-  width: 200px;
+  width: 190px;
   position: absolute;
-  bottom: 15px;
-  right: -150px;
-  animation: pipe-anime 10s infinite linear;
+  bottom: 17px;
+  right: -200px;
+  animation: placa_tiro 12s infinite linear;
+  animation-iteration-count: 2;
+}
+
+#placa_abeia {
+  width: 70px;
+  position: absolute;
+  bottom: 24px;
+  right: -300px;
+  animation: placa_abeia 14s linear;
+  animation-iteration-count: 2;
 }
 
 #gameOver {
@@ -69,11 +80,12 @@ body{
 }
 
 #pipe {
-  width: 80px;
+  width: 100px;
   position: absolute;
-  bottom: 50px;
+  bottom: 25px;
   right: 0;
-  animation: pipe-anime 2.5s infinite linear;
+  animation: pipe-anime 50s infinite linear;
+  z-index: -2;
 }
 
 #mario {
@@ -88,7 +100,15 @@ body{
   position: absolute;
   bottom: 170px;
   right: -60;
-  animation: nuven-anime 7s infinite linear;
+  animation: nuven-anime 10s infinite linear;
+}
+
+#grama {
+  width: 1500px;
+  position: absolute;
+  bottom: 17px;
+  right: 0;
+  animation: grama-anime 5s infinite linear;
 }
 
 #grama2 {
@@ -99,6 +119,7 @@ body{
   z-index: -1;
   animation: grama-anime 12s infinite linear;
 }
+
 #grama3 {
   width: 1500px;
   position: absolute;
@@ -106,16 +127,9 @@ body{
   right: 0;
   z-index: -2;
 }
-#grama {
-  width: 1500px;
-  position: absolute;
-  bottom: 17px;
-  right: 0;
-  animation: grama-anime 5s infinite linear;
-}
 
 .jump {
-  animation: mario-jump 2s;
+  animation: mario-jump 0.3s;
 }
 
 @keyframes pipe-anime {
@@ -128,13 +142,35 @@ body{
   }
 }
 
+@keyframes placa_tiro {
+  from {
+    right: -200px;
+  }
+
+  to {
+    right: 100%;
+  }
+}
+
+@keyframes placa_abeia {
+  from {
+    right: -300px;
+  }
+
+  to {
+    right: 100%;
+  }
+}
+
 @keyframes mario-jump {
   0% {
     bottom: 130px;
   }
+
   50% {
     bottom: 180px;
   }
+
   100% {
     bottom: 130px;
   }
@@ -159,12 +195,13 @@ body{
     right: 100%;
   }
 }
+
 @keyframes grama-anime {
   from {
-  right: -150px;
+    right: -150px;
   }
 
   to {
     right: 150px;
   }
-} 
+}
