@@ -1,6 +1,7 @@
 body {
-  background-image: url(../img/pixel-green.png);
+  background-image: url(../img/fundo\ jardim.png);
 }
+
 .board {
   position: relative;
   width: 450px;
@@ -50,10 +51,9 @@ body {
 }
 
 .menu {
-  margin: 210px auto auto 60px;
+  width: 1px;
+  margin: 220px auto auto 170px;
   margin-left: -20px auto;
-  width: 300px;
-  height: 300px;
   text-align: center;
 }
 
@@ -62,8 +62,8 @@ body {
   position: absolute;
   bottom: 17px;
   right: -200px;
-  animation: placa_tiro 12s infinite linear;
-  animation-iteration-count: 2;
+  animation: placa_tiro 12s linear;
+  /* animation-iteration-count: 2; */
 }
 
 #placa_abeia {
@@ -72,11 +72,20 @@ body {
   bottom: 24px;
   right: -300px;
   animation: placa_abeia 14s linear;
-  animation-iteration-count: 2;
+  /* animation-iteration-count: 2; */
+}
+
+#placa_estrela {
+  width: 190px;
+  position: absolute;
+  bottom: -45px;
+  right: -500px;
+  animation: placa_estrela 18s linear;
+  /* animation-iteration-count: 2; */
 }
 
 #gameOver {
-  size: 100px;
+  size: 300px;
 }
 
 #pipe {
@@ -84,8 +93,8 @@ body {
   position: absolute;
   bottom: 25px;
   right: 0;
-  animation: pipe-anime 50s infinite linear;
-  z-index: -2;
+  animation: pipe-anime 45s infinite linear;
+  z-index: -1;
 }
 
 #mario {
@@ -101,6 +110,7 @@ body {
   bottom: 170px;
   right: -60;
   animation: nuven-anime 10s infinite linear;
+  z-index: -2;
 }
 
 #grama {
@@ -108,7 +118,8 @@ body {
   position: absolute;
   bottom: 17px;
   right: 0;
-  animation: grama-anime 5s infinite linear;
+  animation: grama-anime 10s infinite linear;
+  z-index: 1;
 }
 
 #grama2 {
@@ -116,7 +127,7 @@ body {
   position: absolute;
   bottom: 17px;
   right: 0;
-  z-index: -1;
+  z-index: 1;
   animation: grama-anime 12s infinite linear;
 }
 
@@ -125,7 +136,7 @@ body {
   position: absolute;
   bottom: 17px;
   right: 0;
-  z-index: -2;
+  z-index: -1;
 }
 
 .jump {
@@ -155,6 +166,16 @@ body {
 @keyframes placa_abeia {
   from {
     right: -300px;
+  }
+
+  to {
+    right: 100%;
+  }
+}
+
+@keyframes placa_estrela {
+  from {
+    right: -500px;
   }
 
   to {
