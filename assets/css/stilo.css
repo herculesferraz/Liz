@@ -13,7 +13,7 @@ body {
   bottom: 0;
   right: 0;
   left: 0;
-  margin: -550px 140px;
+  margin: -550px 180px;
   z-index: -1;
   text-align: left;
 }
@@ -41,7 +41,7 @@ body {
   left: 0;
   bottom: 0;
   right: 0;
-  margin: 200px auto auto auto;
+  margin: 220px auto auto auto;
   justify-content: center;
   align-items: center;
 }
@@ -70,7 +70,7 @@ body {
   width: 70px;
   position: absolute;
   bottom: 24px;
-  right: -300px;
+  right: -250px;
   animation: placa_abeia 14s linear;
   /* animation-iteration-count: 2; */
 }
@@ -165,7 +165,7 @@ body {
 
 @keyframes placa_abeia {
   from {
-    right: -300px;
+    right: -250px;
   }
 
   to {
