@@ -13,7 +13,7 @@ body {
   bottom: 0;
   right: 0;
   left: 0;
-  margin: -550px auto;
+  margin: -550px 140px;
   z-index: -1;
   text-align: left;
 }
@@ -53,7 +53,7 @@ body {
 .menu {
   width: 1px;
   margin: 220px auto auto 170px;
-  margin-left: -20px auto;
+  margin-left: 315px;
   text-align: center;
 }
 
