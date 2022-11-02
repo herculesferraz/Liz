@@ -13,7 +13,7 @@ body {
   bottom: 0;
   right: 0;
   left: 0;
-  margin: -550px 180px;
+  margin: -550px auto;
   z-index: -1;
   text-align: left;
 }
@@ -52,8 +52,8 @@ body {
 
 .menu {
   width: 1px;
-  margin: 220px auto auto 170px;
-  margin-left: 315px;
+  margin: 220px auto auto auto;
+  margin-left: 183px;
   text-align: center;
 }
 
@@ -63,7 +63,6 @@ body {
   bottom: 17px;
   right: -200px;
   animation: placa_tiro 12s linear;
-  /* animation-iteration-count: 2; */
 }
 
 #placa_abeia {
@@ -72,16 +71,39 @@ body {
   bottom: 24px;
   right: -250px;
   animation: placa_abeia 14s linear;
-  /* animation-iteration-count: 2; */
 }
 
 #placa_estrela {
   width: 190px;
   position: absolute;
   bottom: -45px;
-  right: -500px;
+  right: -450px;
   animation: placa_estrela 18s linear;
-  /* animation-iteration-count: 2; */
+}
+
+#placa_vergonha {
+  width: 70px;
+  position: absolute;
+  bottom: 24px;
+  right: -520px;
+  animation: placa_vergonha 19s linear;
+}
+
+#placa_flor {
+  width: 190px;
+  position: absolute;
+  bottom: -44px;
+  right: -700px;
+  animation: placa_estrela 31s linear;
+}
+
+#placa_frase {
+  width: 100px;
+  position: absolute;
+  bottom: 7px;
+  right: -720px;
+  animation: placa_flor 34s linear; 
+  z-index: -1;
 }
 
 #gameOver {
@@ -93,7 +115,7 @@ body {
   position: absolute;
   bottom: 25px;
   right: 0;
-  animation: pipe-anime 45s infinite linear;
+  animation: pipe-anime 40s infinite linear;
   z-index: -1;
 }
 
@@ -127,7 +149,7 @@ body {
   position: absolute;
   bottom: 17px;
   right: 0;
-  z-index: 1;
+  z-index: -1;
   animation: grama-anime 12s infinite linear;
 }
 
@@ -140,12 +162,12 @@ body {
 }
 
 .jump {
-  animation: mario-jump 0.3s;
+  animation: mario-jump 0.34654s;
 }
 
 @keyframes pipe-anime {
   from {
-    right: -150px;
+    right: -730px;
   }
 
   to {
@@ -175,7 +197,27 @@ body {
 
 @keyframes placa_estrela {
   from {
+    right: -450px;
+  }
+
+  to {
+    right: 100%;
+  }
+}
+
+@keyframes placa_vergonha {
+  from {
     right: -500px;
+  }
+
+  to {
+    right: 100%;
+  }
+}
+
+@keyframes placa_flor {
+  from {
+    right: -700px;
   }
 
   to {

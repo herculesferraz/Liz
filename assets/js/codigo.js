@@ -1,9 +1,11 @@
 const mario = document.querySelector("#mario");
 const cano = document.querySelector("#pipe");
-const nuvem = document.querySelector("#nuven")
-const grama = document.querySelector("#grama")
-const placa_tiro = document.querySelector("#placa_tiro")
-const placa_abeia = document.querySelector("#placa_abeia")
+const nuvem = document.querySelector("#nuven");
+const grama = document.querySelector("#grama");
+const grama2 = document.querySelector("#grama2");
+const placa_tiro = document.querySelector("#placa_tiro");
+const placa_abeia = document.querySelector("#placa_abeia");
+const placa_estrela = document.querySelector("#placa_estrela");
 
 const btnsReset = document.querySelectorAll(".clReset")
 Array.from(btnsReset).forEach(btn => 
@@ -19,8 +21,10 @@ const loop = setInterval(() => {
   const marioPosicao = window.getComputedStyle(mario).bottom.replace("px", "");
   const nuvemPosicao = nuvem.offsetLeft;
   const gramaPosicao = grama.offsetLeft;
+  const grama2Posicao = grama2.offsetLeft;
   const tiro_Posicao = placa_tiro.offsetLeft;
   const abeia_Posicao = placa_abeia.offsetLeft;
+  const estrela_Posicao = placa_estrela.offsetLeft;
   console.log(marioPosicao)
   if (canoPosicao >= -65 && canoPosicao <= 98 && marioPosicao < 105) {
     cano.style.animation = "none";
@@ -36,8 +40,10 @@ const loop = setInterval(() => {
     nuvem.style.animation = "none";
     nuvem.style.left = `${nuvemPosicao}px`;
     grama.style.left = `${gramaPosicao}px`;
+    grama.style.left = `${grama2Posicao}px`;
     placa_tiro.style.left = `${tiro_Posicao}px`;
     placa_abeia.style.left = `${abeia_Posicao}px`;
+    placa_estrela.style.left = `${estrela_Posicao}px`;
   }
 }, 100);
 
